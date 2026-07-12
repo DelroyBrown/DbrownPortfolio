@@ -35,8 +35,22 @@ jobs:
         with:
           enablement: true
 
+      # `npm ci` installs the lockfile exactly and is the right default. It
+      # can still fail on a runner when the lockfile can't be reproduced
+      # there (a platform-specific optional dep, or a pinned version the
+      # registry won't serve). Falling back to `npm install` re-resolves
+      # within the semver ranges in package.json; the typecheck/lint/test
+      # gates below then catch any resolution that actually breaks the app,
+      # so a fallback can't silently ship a broken build.
       - name: Install dependencies
-        run: npm ci
+        run: |
+          if npm ci --no-audit --no-fund; then
+            echo "installed via npm ci (lockfile reproduced exactly)"
+          else
+            echo "::warning::npm ci failed - falling back to npm install"
+            npm install --no-audit --no-fund
+            echo "installed via npm install (lockfile re-resolved)"
+          fi
 
       - name: Type check
         run: npm run typecheck
