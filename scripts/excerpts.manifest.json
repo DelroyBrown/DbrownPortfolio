@@ -1,0 +1,95 @@
+{
+  "$comment": "Curated code excerpts pulled from the real project repositories. Run `npm run sync:excerpts` to refresh src/content/codeExcerpts.gen.ts from these ranges. If a file moves upstream, update sourcePath/lines here and re-run.",
+  "excerpts": [
+    {
+      "id": "pendulum-rope",
+      "project": "pendulum",
+      "repo": "DelroyBrown/pendulum",
+      "branch": "main",
+      "sourcePath": "src/game/physics/player.ts",
+      "language": "tsx",
+      "startLine": 51,
+      "endLine": 111
+    },
+    {
+      "id": "pendulum-fixed-step",
+      "project": "pendulum",
+      "repo": "DelroyBrown/pendulum",
+      "branch": "main",
+      "sourcePath": "src/game/Game.ts",
+      "language": "tsx",
+      "startLine": 911,
+      "endLine": 941
+    },
+    {
+      "id": "pendulum-seeded-rng",
+      "project": "pendulum",
+      "repo": "DelroyBrown/pendulum",
+      "branch": "main",
+      "sourcePath": "src/game/core/rng.ts",
+      "language": "tsx",
+      "startLine": 1,
+      "endLine": 28
+    },
+    {
+      "id": "thread-tension",
+      "project": "thread",
+      "repo": "DelroyBrown/thread",
+      "branch": "main",
+      "sourcePath": "src/game/threads/Thread.ts",
+      "language": "tsx",
+      "startLine": 125,
+      "endLine": 183
+    },
+    {
+      "id": "thread-events",
+      "project": "thread",
+      "repo": "DelroyBrown/thread",
+      "branch": "main",
+      "sourcePath": "src/utils/events.ts",
+      "language": "tsx",
+      "startLine": 1,
+      "endLine": 28
+    },
+    {
+      "id": "thread-level-data",
+      "project": "thread",
+      "repo": "DelroyBrown/thread",
+      "branch": "main",
+      "sourcePath": "src/data/levels/level1.ts",
+      "language": "tsx",
+      "startLine": 1,
+      "endLine": 50
+    },
+    {
+      "id": "invader-glow",
+      "project": "invader",
+      "repo": "DelroyBrown/Invader",
+      "branch": "main",
+      "sourcePath": "src/utils/gfx.ts",
+      "language": "tsx",
+      "startLine": 1,
+      "endLine": 31
+    },
+    {
+      "id": "invader-waves",
+      "project": "invader",
+      "repo": "DelroyBrown/Invader",
+      "branch": "main",
+      "sourcePath": "src/systems/Waves.ts",
+      "language": "tsx",
+      "startLine": 19,
+      "endLine": 105
+    },
+    {
+      "id": "invader-kill",
+      "project": "invader",
+      "repo": "DelroyBrown/Invader",
+      "branch": "main",
+      "sourcePath": "src/Game.ts",
+      "language": "tsx",
+      "startLine": 548,
+      "endLine": 582
+    }
+  ]
+}

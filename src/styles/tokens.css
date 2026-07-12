@@ -1,0 +1,114 @@
+/* ------------------------------------------------------------------ *
+ *  Design tokens — the single source of truth for the visual system. *
+ * ------------------------------------------------------------------ */
+
+:root {
+  /* ---- surfaces ---- */
+  --bg-0: #0b0d12; /* page — warm blue-black */
+  --bg-1: #10131b; /* raised */
+  --bg-2: #151a24; /* panels */
+  --bg-3: #1b2130; /* highest */
+  --bg-tint: rgba(21, 26, 36, 0.72);
+
+  /* ---- lines ---- */
+  --line-faint: rgba(214, 222, 235, 0.07);
+  --line: rgba(214, 222, 235, 0.12);
+  --line-strong: rgba(214, 222, 235, 0.22);
+
+  /* ---- ink ---- */
+  --ink-0: #eae7df; /* soft ivory */
+  --ink-1: #a6adba; /* cool grey */
+  --ink-2: #6f7683; /* faint stone */
+  --ink-3: #494f5a; /* ghost */
+
+  /* ---- accents (used sparingly) ---- */
+  --cyan: #5fc8cf;
+  --cyan-dim: rgba(95, 200, 207, 0.14);
+  --coral: #e08d6d;
+  --coral-dim: rgba(224, 141, 109, 0.14);
+  --gold: #c9a86a;
+  --gold-dim: rgba(201, 168, 106, 0.14);
+
+  /* ---- project identities ---- */
+  --pendulum-a: #8ea3e8; /* moonlit blue */
+  --pendulum-b: #a98fd6; /* cathedral violet */
+  --pendulum-gold: #d8b46e; /* timing window */
+  --pendulum-bg: #0d1020;
+  --pendulum-glow: rgba(142, 163, 232, 0.16);
+
+  --thread-cream: #e8d8bd; /* fabric */
+  --thread-cyan: #5ac4d4; /* thread light */
+  --thread-coral: #e0876d;
+  --thread-green: #93ad8b; /* meadow felt */
+  --thread-bg: #16120e; /* warm workshop dark */
+  --thread-glow: rgba(90, 196, 212, 0.14);
+
+  --invader-magenta: #ff5df1; /* the game's own neon */
+  --invader-cyan: #26d8ff;
+  --invader-bg: #0d0817; /* void violet */
+  --invader-glow: rgba(255, 93, 241, 0.12);
+
+  --care-accent: #7fb8a4; /* calm clinical green */
+  --care-dim: rgba(127, 184, 164, 0.13);
+
+  /* ---- typography ---- */
+  --font-display: "Space Grotesk Variable", "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Manrope Variable", "Manrope", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Code", Menlo, monospace;
+
+  --text-xs: 0.72rem;
+  --text-sm: 0.845rem;
+  --text-base: clamp(0.98rem, 0.93rem + 0.18vw, 1.08rem);
+  --text-lg: clamp(1.12rem, 1.05rem + 0.3vw, 1.3rem);
+  --text-xl: clamp(1.35rem, 1.2rem + 0.7vw, 1.8rem);
+  --text-2xl: clamp(1.8rem, 1.5rem + 1.4vw, 2.7rem);
+  --text-3xl: clamp(2.3rem, 1.8rem + 2.6vw, 4rem);
+  --text-display: clamp(2.7rem, 1.6rem + 5.4vw, 6.2rem);
+
+  /* ---- rhythm ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2.5rem;
+  --space-6: 4rem;
+  --space-7: 6.5rem;
+  --space-section: clamp(5.5rem, 4rem + 8vh, 10rem);
+
+  --container-max: 84rem;
+  --gutter: clamp(1.25rem, 4vw, 3.5rem);
+
+  /* ---- motion ---- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-soft: cubic-bezier(0.33, 1, 0.68, 1);
+  --dur-fast: 220ms;
+  --dur-base: 480ms;
+  --dur-slow: 850ms;
+  --reveal-y: 26px;
+
+  /* ---- radii / shadow ---- */
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 18px;
+  --shadow-panel: 0 18px 50px -18px rgba(0, 0, 0, 0.55);
+
+  /* ---- z ---- */
+  --z-nav: 60;
+  --z-menu: 70;
+  --z-focusmode: 80;
+  --z-transition: 90;
+  --z-loader: 100;
+  --z-cursor: 110;
+
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 1ms;
+    --dur-base: 1ms;
+    --dur-slow: 1ms;
+    --reveal-y: 0px;
+  }
+}

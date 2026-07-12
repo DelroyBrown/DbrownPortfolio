@@ -1,0 +1,121 @@
+.tech-map {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-3);
+}
+
+.tech-group:nth-child(1) {
+  grid-column: span 3;
+}
+
+.tech-group:nth-child(2) {
+  grid-column: span 3;
+}
+
+.tech-group:nth-child(3) {
+  grid-column: span 2;
+}
+
+.tech-group:nth-child(4) {
+  grid-column: span 2;
+}
+
+.tech-group:nth-child(5) {
+  grid-column: span 2;
+}
+
+.tech-group__inner {
+  height: 100%;
+  padding: var(--space-4);
+  border: 1px solid var(--line-faint);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, var(--bg-2), var(--bg-1));
+  position: relative;
+  overflow: hidden;
+  transition:
+    border-color var(--dur-base) var(--ease-out),
+    transform var(--dur-base) var(--ease-out);
+}
+
+.tech-group__inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: var(--space-4);
+  right: 60%;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.75;
+  transition: right var(--dur-slow) var(--ease-out);
+}
+
+@media (hover: hover) {
+  .tech-map:hover .tech-group__inner {
+    opacity: 0.72;
+  }
+
+  .tech-map .tech-group:hover .tech-group__inner {
+    opacity: 1;
+    border-color: color-mix(in srgb, var(--accent) 35%, transparent);
+    transform: translateY(-3px);
+  }
+
+  .tech-group:hover .tech-group__inner::before {
+    right: var(--space-4);
+  }
+
+  .tech-group__inner {
+    transition:
+      border-color var(--dur-base) var(--ease-out),
+      transform var(--dur-base) var(--ease-out),
+      opacity var(--dur-base) var(--ease-out);
+  }
+}
+
+.tech-group__head {
+  margin-bottom: var(--space-3);
+}
+
+.tech-group__title {
+  font-size: var(--text-lg);
+  font-weight: 400;
+  margin-bottom: 0.3rem;
+}
+
+.tech-group__note {
+  font-size: var(--text-sm);
+  color: var(--ink-2);
+}
+
+.tech-group__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+@media (max-width: 900px) {
+  .tech-map {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tech-group:nth-child(n) {
+    grid-column: span 1;
+  }
+
+  .tech-group:nth-child(5) {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .tech-map {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-group:nth-child(n) {
+    grid-column: span 1;
+  }
+}

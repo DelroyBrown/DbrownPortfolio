@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#0b0d12"/>
+  <path d="M0,300 L140,300 L180,240 L340,240 L380,285 L520,285 L560,255 L640,255" fill="none" stroke="rgba(95,200,207,0.5)" stroke-width="1.5"/>
+  <circle cx="180" cy="240" r="4" fill="#5fc8cf"/>
+  <circle cx="380" cy="285" r="4" fill="#e08d6d"/>
+  <circle cx="560" cy="255" r="4" fill="#c9a86a"/>
+  <text x="60" y="120" font-family="monospace" font-size="13" letter-spacing="6" fill="#6f7683">DJB — PORTFOLIO</text>
+  <text x="58" y="170" font-family="sans-serif" font-weight="300" font-size="40" fill="#eae7de">Delroy J. Brown</text>
+  <text x="60" y="200" font-family="sans-serif" font-size="16" fill="#a6adba">This site, as a project.</text>
+</svg>

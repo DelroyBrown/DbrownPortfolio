@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#10131b"/>
+  <g stroke="rgba(214,222,235,0.05)"><line x1="106" y1="0" x2="106" y2="360"/><line x1="212" y1="0" x2="212" y2="360"/><line x1="318" y1="0" x2="318" y2="360"/><line x1="424" y1="0" x2="424" y2="360"/><line x1="530" y1="0" x2="530" y2="360"/></g>
+  <rect x="60" y="90" width="150" height="86" rx="8" fill="#151a24" stroke="rgba(214,222,235,0.14)"/>
+  <rect x="270" y="76" width="130" height="46" rx="8" fill="#151a24" stroke="rgba(127,184,164,0.5)"/>
+  <rect x="270" y="134" width="130" height="46" rx="8" fill="#151a24" stroke="rgba(127,184,164,0.5)"/>
+  <rect x="460" y="72" width="120" height="30" rx="6" fill="#151a24" stroke="rgba(214,222,235,0.14)"/>
+  <rect x="460" y="110" width="120" height="30" rx="6" fill="#151a24" stroke="rgba(214,222,235,0.14)"/>
+  <rect x="460" y="148" width="120" height="30" rx="6" fill="#151a24" stroke="#7fb8a4" stroke-dasharray="4 3"/>
+  <path d="M210,133 C240,133 240,99 270,99 M210,133 C240,133 240,157 270,157 M400,99 C430,99 430,87 460,87 M400,157 C430,157 430,163 460,163" fill="none" stroke="rgba(127,184,164,0.45)" stroke-dasharray="5 4"/>
+  <text x="60" y="250" font-family="monospace" font-size="15" fill="#7fb8a4">CareCompass</text>
+  <text x="60" y="276" font-family="sans-serif" font-size="13" fill="#a6adba">records → validation → append-only audit history</text>
+</svg>

@@ -1,0 +1,27 @@
+.code-stories {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.code-stories__item {
+  display: grid;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.code-stories__more {
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  min-height: 44px;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-1);
+}
+
+.code-stories__more:hover {
+  color: var(--ink-0);
+}

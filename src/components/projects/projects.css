@@ -1,0 +1,332 @@
+/* ---------------------------------- project index ------------------ */
+
+.project-index {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line-faint);
+}
+
+.project-index__row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 3.5rem 1fr auto 2rem;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 1.4rem 0.5rem;
+  border-bottom: 1px solid var(--line-faint);
+  transition: background-color var(--dur-fast) var(--ease-out);
+}
+
+.project-index__row::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: -1px;
+  width: 2px;
+  background: var(--accent, var(--cyan));
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform var(--dur-base) var(--ease-out);
+}
+
+.project-index__row:hover {
+  background: rgba(21, 26, 36, 0.5);
+}
+
+.project-index__row:hover::before {
+  transform: scaleY(1);
+}
+
+.project-index__num {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.16em;
+  color: var(--ink-2);
+}
+
+.project-index__body {
+  display: grid;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.project-index__title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 340;
+  letter-spacing: -0.01em;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.project-index__row:hover .project-index__title {
+  color: var(--accent, var(--cyan));
+}
+
+.project-index__desc {
+  font-size: var(--text-sm);
+  color: var(--ink-2);
+  max-width: 46ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.project-index__meta {
+  display: grid;
+  justify-items: end;
+  gap: 0.2rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  color: var(--ink-2);
+  text-align: right;
+}
+
+.project-index__arrow {
+  color: var(--ink-3);
+  transition:
+    color var(--dur-fast) var(--ease-out),
+    transform var(--dur-base) var(--ease-out);
+}
+
+.project-index__row:hover .project-index__arrow {
+  color: var(--accent, var(--cyan));
+  transform: translate(3px, -3px);
+}
+
+@media (max-width: 640px) {
+  .project-index__row {
+    grid-template-columns: 2.4rem 1fr 1.4rem;
+  }
+
+  .project-index__meta {
+    display: none;
+  }
+
+  .project-index__desc {
+    white-space: normal;
+  }
+}
+
+/* ---------------------------------- featured story ----------------- */
+
+.featured-story {
+  display: grid;
+  grid-template-columns: minmax(18rem, 5fr) 7fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  padding-block: var(--space-5);
+}
+
+.featured-story__sticky {
+  position: sticky;
+  top: 6rem;
+  display: grid;
+  gap: var(--space-3);
+  justify-items: start;
+}
+
+.featured-story__kicker {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent, var(--cyan));
+}
+
+.featured-story__title {
+  font-size: var(--text-3xl);
+  font-weight: 320;
+  letter-spacing: -0.02em;
+}
+
+.featured-story__desc {
+  color: var(--ink-1);
+}
+
+.featured-story__meta {
+  width: 100%;
+  margin: 0;
+}
+
+.featured-story__visual {
+  border: 1px solid var(--line-faint);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(90% 70% at 20% 0%, var(--care-dim), transparent 60%),
+    var(--bg-1);
+  overflow: hidden;
+}
+
+.featured-story__columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+  margin-top: var(--space-5);
+}
+
+.featured-story__col-title {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin-bottom: var(--space-3);
+}
+
+.featured-story__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+  font-size: var(--text-sm);
+  color: var(--ink-1);
+}
+
+.featured-story__list li {
+  padding-left: 1.1em;
+  position: relative;
+}
+
+.featured-story__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 5px;
+  height: 5px;
+  border-radius: 1px;
+  background: var(--accent, var(--cyan));
+  opacity: 0.7;
+}
+
+.featured-story__list--challenges li {
+  line-height: 1.55;
+}
+
+.featured-story__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: var(--space-5);
+}
+
+@media (max-width: 960px) {
+  .featured-story {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-story__sticky {
+    position: static;
+  }
+
+  .featured-story__columns {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}
+
+/* ---------------------------------- CareCompass blueprint ---------- */
+
+.care-visual {
+  width: 100%;
+  height: auto;
+}
+
+.care-visual__grid {
+  stroke: rgba(214, 222, 235, 0.04);
+  stroke-width: 1;
+}
+
+.care-visual__box {
+  fill: rgba(21, 26, 36, 0.85);
+  stroke: var(--line);
+  stroke-width: 1;
+}
+
+.care-visual__box--accent {
+  stroke: rgba(127, 184, 164, 0.55);
+}
+
+.care-visual__box--new {
+  stroke: var(--care-accent);
+  stroke-dasharray: 4 3;
+}
+
+.care-visual__label {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  fill: var(--ink-1);
+  letter-spacing: 0.06em;
+}
+
+.care-visual__label--accent {
+  fill: var(--care-accent);
+}
+
+.care-visual__small {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  fill: var(--ink-2);
+}
+
+.care-visual__small--accent {
+  fill: var(--care-accent);
+}
+
+.care-visual__ink {
+  stroke: rgba(166, 173, 186, 0.35);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.care-visual__flow {
+  fill: none;
+  stroke: rgba(127, 184, 164, 0.45);
+  stroke-width: 1.2;
+  stroke-dasharray: 5 4;
+  animation: care-flow 2.4s linear infinite;
+}
+
+.care-visual__caption-title {
+  font-family: var(--font-display);
+  font-size: 19px;
+  fill: var(--ink-0);
+  letter-spacing: -0.01em;
+}
+
+.care-visual__caption {
+  font-size: 13.5px;
+  fill: var(--ink-1);
+  font-family: var(--font-body);
+}
+
+.care-visual__node {
+  opacity: 0;
+  animation: care-node 700ms var(--ease-out) forwards;
+}
+
+@keyframes care-node {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes care-flow {
+  to {
+    stroke-dashoffset: -18;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .care-visual__node {
+    opacity: 1;
+    animation: none;
+  }
+
+  .care-visual__flow {
+    animation: none;
+  }
+}
