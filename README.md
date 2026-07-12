@@ -1,9 +1,11 @@
 # Delroy J. Brown — Portfolio
 
 An interactive digital exhibition for a creative full-stack software developer:
-practical systems (CareCompass), playable browser experiments (Pendulum, Thread)
-and an honest account of an AI-assisted development workflow — directed,
-inspected and verified by a human.
+practical systems (CareCompass), playable browser experiments (Pendulum,
+Thread, Invader Storm) and an honest account of an AI-assisted development
+workflow — directed, inspected and verified by a human.
+
+**Live: https://delroybrown.github.io/DbrownPortfolio/**
 
 **Live games showcased inside the portfolio:**
 
@@ -135,15 +137,32 @@ sitemap lists every route explicitly.
 
 ## Deployment (GitHub Pages)
 
-`.github/workflows/deploy.yml` runs on pushes to `main`:
-checkout → Node 22 → `npm ci` → typecheck → lint → unit tests → build →
-upload → deploy. **Deployment only happens if every gate passes.**
+**Live at https://delroybrown.github.io/DbrownPortfolio/**
 
+`.github/workflows/deploy.yml` runs on pushes to `main`:
+checkout → Node 22 → configure Pages → `npm ci` → typecheck → lint → unit
+tests → build → upload → deploy. **Deployment only happens if every gate
+passes.** `actions/configure-pages` runs with `enablement: true`, so the
+workflow turns Pages on itself — no manual repo-settings step is required.
+
+The site is served from a subpath (`/DbrownPortfolio/`), not a domain root.
 The Vite base path is injected by the workflow as
-`PORTFOLIO_BASE=/<repository-name>/`. For a different host or a custom
-domain, set `PORTFOLIO_BASE` accordingly (or leave it unset for `/`) and
-update `siteUrl` in `src/content/profile.ts` plus the URLs in
-`public/sitemap.xml` and `public/robots.txt`.
+`PORTFOLIO_BASE=/<repository-name>/`, which prefixes every asset URL and
+sets the React Router `basename`. **If the repository is renamed, nothing
+in the build needs changing** — but update `siteUrl` in
+`src/content/profile.ts` and the URLs in `public/sitemap.xml` /
+`public/robots.txt`, which are absolute for canonical/SEO reasons.
+
+For a custom domain or a `<user>.github.io` root repo, leave
+`PORTFOLIO_BASE` unset (it defaults to `/`).
+
+To test the subpath build locally exactly as Pages serves it:
+
+```bash
+PORTFOLIO_BASE=/DbrownPortfolio/ npm run build
+PORTFOLIO_BASE=/DbrownPortfolio/ npm run preview
+# → http://localhost:4173/DbrownPortfolio/
+```
 
 ## Accessibility
 

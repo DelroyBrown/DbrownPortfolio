@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Update the host below if the deployment URL changes (see README → Deployment). -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://delroybrown.github.io/newPortfolio/</loc><priority>1.0</priority></url>
-  <url><loc>https://delroybrown.github.io/newPortfolio/work</loc></url>
-  <url><loc>https://delroybrown.github.io/newPortfolio/work/care-compass</loc></url>
-  <url><loc>https://delroybrown.github.io/newPortfolio/work/portfolio</loc></url>
-  <url><loc>https://delroybrown.github.io/newPortfolio/experiments</loc></url>
-  <url><loc>https://delroybrown.github.io/newPortfolio/experiments/pendulum</loc></url>
-  <url><loc>https://delroybrown.github.io/newPortfolio/experiments/thread</loc></url>
-  <url><loc>https://delroybrown.github.io/newPortfolio/experiments/invader-storm</loc></url>
-  <url><loc>https://delroybrown.github.io/newPortfolio/approach</loc></url>
-  <url><loc>https://delroybrown.github.io/newPortfolio/about</loc></url>
-  <url><loc>https://delroybrown.github.io/newPortfolio/contact</loc></url>
+  <url><loc>https://delroybrown.github.io/DbrownPortfolio/</loc><priority>1.0</priority></url>
+  <url><loc>https://delroybrown.github.io/DbrownPortfolio/work</loc></url>
+  <url><loc>https://delroybrown.github.io/DbrownPortfolio/work/care-compass</loc></url>
+  <url><loc>https://delroybrown.github.io/DbrownPortfolio/work/portfolio</loc></url>
+  <url><loc>https://delroybrown.github.io/DbrownPortfolio/experiments</loc></url>
+  <url><loc>https://delroybrown.github.io/DbrownPortfolio/experiments/pendulum</loc></url>
+  <url><loc>https://delroybrown.github.io/DbrownPortfolio/experiments/thread</loc></url>
+  <url><loc>https://delroybrown.github.io/DbrownPortfolio/experiments/invader-storm</loc></url>
+  <url><loc>https://delroybrown.github.io/DbrownPortfolio/approach</loc></url>
+  <url><loc>https://delroybrown.github.io/DbrownPortfolio/about</loc></url>
+  <url><loc>https://delroybrown.github.io/DbrownPortfolio/contact</loc></url>
 </urlset>

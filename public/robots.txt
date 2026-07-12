@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://delroybrown.github.io/newPortfolio/sitemap.xml
+Sitemap: https://delroybrown.github.io/DbrownPortfolio/sitemap.xml

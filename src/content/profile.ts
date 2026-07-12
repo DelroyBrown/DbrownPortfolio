@@ -29,7 +29,7 @@ export const profile: Profile = {
   github: "https://github.com/DelroyBrown",
   linkedin: null, // add a LinkedIn URL to surface the link in Contact
   cvUrl: null, // add e.g. "/cv/delroy-brown-cv.pdf" once the file exists in /public
-  siteUrl: "https://delroybrown.github.io/newPortfolio",
+  siteUrl: "https://delroybrown.github.io/DbrownPortfolio",
   metaDescription:
     "Full-stack software, interactive browser experiences and AI-assisted development by Delroy J. Brown.",
 };
