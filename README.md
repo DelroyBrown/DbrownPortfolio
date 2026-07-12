@@ -186,6 +186,15 @@ PORTFOLIO_BASE=/DbrownPortfolio/ npm run preview
 
 ## Known limitations
 
+- **CI installs with `npm install`, not `npm ci`.** `npm ci` currently fails on
+  the Ubuntu runner (the lockfile, authored on Windows, can't be reproduced
+  there), so the workflow falls back to `npm install` and emits a warning
+  annotation when it does. The typecheck/lint/test/build gates all run on the
+  re-resolved tree before the deploy job, so this can't ship a broken build —
+  but the install isn't byte-for-byte reproducible until the lockfile is
+  regenerated on Linux. To fix properly, run `npm install` once on Linux (or in
+  a `node:22` container) and commit the resulting `package-lock.json`.
+
 - The contact form has no backend — it says so honestly and points to email.
   Wire up a form service, then replace the notice in
   `src/features/contact/ContactPanel.tsx`.
