@@ -70,7 +70,7 @@ export function AiDevelopment() {
     <section className="section" id="ai-development" aria-labelledby="ai-title">
       <div className="container">
         <SectionIntroduction
-          index="02"
+          index="03"
           eyebrow="AI-Assisted Development"
           title={<span id="ai-title">Directed, inspected, verified.</span>}
           lede={aiIntroduction}

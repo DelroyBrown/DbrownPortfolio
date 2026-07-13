@@ -22,11 +22,33 @@ describe("routes", () => {
     expect(screen.getByText(/available now/i)).toBeInTheDocument();
   });
 
-  it("renders the homepage sections in order", async () => {
+  it("renders the homepage sections in recruiter order", async () => {
     renderRoute("/");
     await screen.findByRole("heading", { level: 1 });
-    for (const id of ["work", "ai-development", "experiments", "code", "approach", "skills", "experience", "education", "about", "contact"]) {
-      expect(document.getElementById(id), `section #${id}`).toBeInTheDocument();
+    // facts first (experience, skills), the AI differentiator, then the work
+    const expectedOrder = [
+      "experience",
+      "skills",
+      "ai-development",
+      "work",
+      "experiments",
+      "code",
+      "education",
+      "approach",
+      "about",
+      "contact",
+    ];
+    const sections = expectedOrder.map((id) => {
+      const el = document.getElementById(id);
+      expect(el, `section #${id}`).toBeInTheDocument();
+      return el!;
+    });
+    for (let i = 1; i < sections.length; i++) {
+      const before = sections[i - 1].compareDocumentPosition(sections[i]);
+      expect(
+        before & Node.DOCUMENT_POSITION_FOLLOWING,
+        `#${expectedOrder[i]} should come after #${expectedOrder[i - 1]}`,
+      ).toBeTruthy();
     }
   });
 

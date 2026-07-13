@@ -14,12 +14,13 @@ export default function AboutPage() {
     path: "/about",
   });
 
+  /* Recruiter order, matching the homepage: record → skills → schooling → person. */
   return (
     <div className="page">
-      <About />
       <Experience />
-      <Education />
       <TechnologyMap />
+      <Education />
+      <About />
     </div>
   );
 }

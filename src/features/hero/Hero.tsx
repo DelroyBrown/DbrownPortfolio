@@ -76,10 +76,10 @@ export function Hero() {
               <button
                 type="button"
                 className="btn btn--solid"
-                onClick={() => scrollToTarget("work")}
+                onClick={() => scrollToTarget("experience")}
                 data-cursor="View"
               >
-                Selected work
+                Experience & work
                 <ArrowDown size={15} aria-hidden="true" />
               </button>
               <button

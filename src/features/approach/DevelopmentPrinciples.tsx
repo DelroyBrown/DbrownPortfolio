@@ -11,7 +11,7 @@ export function DevelopmentPrinciples() {
         <div className="approach__aside">
           <div className="approach__sticky">
             <SectionIntroduction
-              index="05"
+              index="08"
               eyebrow="Development Approach"
               title={<span id="approach-title">How I build.</span>}
               lede="Principles that survive contact with real projects — not personality claims."

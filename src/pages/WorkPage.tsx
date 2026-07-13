@@ -17,7 +17,7 @@ export default function WorkPage() {
     <div className="page">
       <div className="container">
         <SectionIntroduction
-          index="01"
+          index="04"
           eyebrow="Selected Work"
           title="Software shaped around real problems."
           lede="Every project here is a system, not a screenshot — most have live builds or public repositories."

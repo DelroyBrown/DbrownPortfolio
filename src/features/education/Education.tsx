@@ -13,7 +13,7 @@ export function Education() {
     <section className="section" id="education" aria-labelledby="education-title">
       <div className="container">
         <SectionIntroduction
-          index="08"
+          index="07"
           eyebrow="Education & Certification"
           title={<span id="education-title">Trained formally, learning constantly.</span>}
           accent="var(--gold)"

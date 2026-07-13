@@ -9,7 +9,7 @@ export function Experience() {
     <section className="section" id="experience" aria-labelledby="experience-title">
       <div className="container">
         <SectionIntroduction
-          index="07"
+          index="01"
           eyebrow="Experience"
           title={<span id="experience-title">Where the judgement comes from.</span>}
           lede={experienceIntro}

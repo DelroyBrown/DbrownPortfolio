@@ -13,7 +13,7 @@ export function TechnologyMap() {
     <section className="section" id="skills" aria-labelledby="skills-title">
       <div className="container">
         <SectionIntroduction
-          index="06"
+          index="02"
           eyebrow="Skills & Technologies"
           title={<span id="skills-title">A working ecosystem.</span>}
           lede="Grouped by how they are actually used together — no progress bars, no percentages."

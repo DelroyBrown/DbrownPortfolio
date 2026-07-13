@@ -58,17 +58,19 @@ export function HomePage() {
     return () => clearTimeout(t);
   }, [location.hash]);
 
+  /* Ordered for a recruiter's scan: verifiable facts first (experience,
+   * skills), the AI-workflow differentiator, then the work itself. */
   return (
     <>
       <Hero />
-      <SelectedWork />
+      <Experience />
+      <TechnologyMap />
       <AiDevelopment />
+      <SelectedWork />
       <Exhibition />
       <CodeStoriesSection />
-      <DevelopmentPrinciples />
-      <TechnologyMap />
-      <Experience />
       <Education />
+      <DevelopmentPrinciples />
       <About />
       <ContactPanel />
     </>

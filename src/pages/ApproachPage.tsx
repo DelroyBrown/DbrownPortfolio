@@ -14,8 +14,8 @@ export default function ApproachPage() {
 
   return (
     <div className="page">
-      <DevelopmentPrinciples />
       <AiDevelopment />
+      <DevelopmentPrinciples />
     </div>
   );
 }

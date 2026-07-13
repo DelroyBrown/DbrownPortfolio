@@ -20,7 +20,7 @@ export function Exhibition() {
     <section className="section section--exhibition" id="experiments" aria-labelledby="exhibition-title">
       <div className="container">
         <SectionIntroduction
-          index="03"
+          index="05"
           eyebrow="Interactive Exhibition"
           title={<span id="exhibition-title">Three worlds, playable here.</span>}
           lede="Featured AI-assisted projects — complete browser games, built as serious engineering. The live builds load only when you press play."
@@ -30,7 +30,7 @@ export function Exhibition() {
 
       <GameShowcase
         game={pendulum}
-        index="03·01"
+        index="05·01"
         variant="pendulum"
         aspect="16 / 9.5"
         atmosphere={
@@ -44,7 +44,7 @@ export function Exhibition() {
 
       <GameShowcase
         game={thread}
-        index="03·02"
+        index="05·02"
         variant="thread"
         aspect="16 / 9"
         atmosphere={
@@ -66,7 +66,7 @@ export function Exhibition() {
 
       <GameShowcase
         game={invaderStorm}
-        index="03·03"
+        index="05·03"
         variant="invader"
         aspect="16 / 9"
         atmosphere={<InvaderAtmosphere />}

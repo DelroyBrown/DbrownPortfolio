@@ -19,7 +19,7 @@ export default function ExperimentsPage() {
     <div className="page">
       <div className="container">
         <SectionIntroduction
-          index="03"
+          index="05"
           eyebrow="Interactive Exhibition"
           title="Three worlds, playable here."
           lede="Complete browser games treated as serious technical and creative work. Press play to load the live builds."
@@ -29,7 +29,7 @@ export default function ExperimentsPage() {
 
       <GameShowcase
         game={pendulum}
-        index="03·01"
+        index="05·01"
         variant="pendulum"
         aspect="16 / 9.5"
         atmosphere={
@@ -43,7 +43,7 @@ export default function ExperimentsPage() {
 
       <GameShowcase
         game={thread}
-        index="03·02"
+        index="05·02"
         variant="thread"
         aspect="16 / 9"
         atmosphere={
@@ -65,7 +65,7 @@ export default function ExperimentsPage() {
 
       <GameShowcase
         game={invaderStorm}
-        index="03·03"
+        index="05·03"
         variant="invader"
         aspect="16 / 9"
         atmosphere={<InvaderAtmosphere />}

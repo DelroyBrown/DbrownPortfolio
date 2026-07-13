@@ -16,6 +16,7 @@ export interface NavItem {
 
 export const NAV_ITEMS: NavItem[] = [
   { label: "Index", section: null },
+  { label: "Experience", section: "experience" },
   { label: "Work", section: "work" },
   { label: "AI Development", section: "ai-development" },
   { label: "Code", section: "code" },

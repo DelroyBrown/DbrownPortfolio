@@ -20,7 +20,7 @@ export function CodeStoriesSection() {
     <section className="section" id="code" aria-labelledby="code-title">
       <div className="container">
         <SectionIntroduction
-          index="04"
+          index="06"
           eyebrow="Code & Engineering Stories"
           title={<span id="code-title">The code is part of the story.</span>}
           lede="Real excerpts from the shipped games — what question each one answers, what was decided, and what it cost. Every excerpt links to its exact lines in the repository."

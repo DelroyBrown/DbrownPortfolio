@@ -15,7 +15,7 @@ export function SelectedWork() {
     <section className="section" id="work" aria-labelledby="work-title">
       <div className="container">
         <SectionIntroduction
-          index="01"
+          index="04"
           eyebrow="Selected Work"
           title={<span id="work-title">Software shaped around real problems.</span>}
           lede="Maintainable systems, clear user needs, and rules that live where they can be trusted."
