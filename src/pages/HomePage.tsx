@@ -8,6 +8,7 @@ import { CodeStoriesSection } from "../features/codeStories/CodeStoriesSection";
 import { DevelopmentPrinciples } from "../features/approach/DevelopmentPrinciples";
 import { TechnologyMap } from "../features/skills/TechnologyMap";
 import { Experience } from "../features/experience/Experience";
+import { Education } from "../features/education/Education";
 import { About } from "../features/about/About";
 import { ContactPanel } from "../features/contact/ContactPanel";
 import { usePageMeta } from "../hooks/usePageMeta";
@@ -67,6 +68,7 @@ export function HomePage() {
       <DevelopmentPrinciples />
       <TechnologyMap />
       <Experience />
+      <Education />
       <About />
       <ContactPanel />
     </>

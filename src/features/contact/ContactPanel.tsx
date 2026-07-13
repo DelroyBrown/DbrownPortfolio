@@ -23,7 +23,7 @@ export function ContactPanel() {
     <section className="section" id="contact" aria-labelledby="contact-title">
       <div className="container">
         <SectionIntroduction
-          index="09"
+          index="10"
           eyebrow="Contact"
           title={
             <span id="contact-title">Let's build something worth remembering.</span>

@@ -25,7 +25,7 @@ describe("routes", () => {
   it("renders the homepage sections in order", async () => {
     renderRoute("/");
     await screen.findByRole("heading", { level: 1 });
-    for (const id of ["work", "ai-development", "experiments", "code", "approach", "skills", "experience", "about", "contact"]) {
+    for (const id of ["work", "ai-development", "experiments", "code", "approach", "skills", "experience", "education", "about", "contact"]) {
       expect(document.getElementById(id), `section #${id}`).toBeInTheDocument();
     }
   });

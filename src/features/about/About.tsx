@@ -1,5 +1,6 @@
 import { SectionIntroduction } from "../../components/common/SectionIntroduction";
 import { Reveal } from "../../components/common/Reveal";
+import { personalDetails } from "../../content/experience";
 import "./about.css";
 
 /** About — editorial fragments, not a wall of text. */
@@ -8,7 +9,7 @@ export function About() {
     <section className="section" id="about" aria-labelledby="about-title">
       <div className="container">
         <SectionIntroduction
-          index="08"
+          index="09"
           eyebrow="About"
           title={<span id="about-title">Structure meets direction.</span>}
         />
@@ -40,6 +41,18 @@ export function About() {
             quickly, while my role remains defining the outcome, reviewing the
             implementation and deciding whether the software is genuinely good
             enough.
+          </Reveal>
+
+          <Reveal className="about__details" delay={200}>
+            <h3 className="about__details-title">The practical details</h3>
+            <dl className="about__details-grid">
+              {personalDetails.map((detail) => (
+                <div key={detail.label} className="about__detail">
+                  <dt>{detail.label}</dt>
+                  <dd>{detail.value}</dd>
+                </div>
+              ))}
+            </dl>
           </Reveal>
         </div>
       </div>

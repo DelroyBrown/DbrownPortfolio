@@ -1,0 +1,155 @@
+.edu {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  grid-template-areas:
+    "diploma certs"
+    "learning certs";
+  gap: var(--space-4) clamp(2rem, 4vw, 4rem);
+  align-items: start;
+}
+
+.edu__kicker {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin-bottom: var(--space-3);
+}
+
+/* ---- diploma ---- */
+
+.edu__diploma {
+  grid-area: diploma;
+  padding: var(--space-4);
+  border: 1px solid var(--line-faint);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, var(--bg-2), var(--bg-1));
+  position: relative;
+  overflow: hidden;
+}
+
+.edu__diploma::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: var(--space-4);
+  width: 3.5rem;
+  height: 1px;
+  background: var(--gold);
+}
+
+.edu__title {
+  font-size: var(--text-xl);
+  font-weight: 360;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.4rem;
+}
+
+.edu__institution {
+  color: var(--ink-1);
+  font-size: var(--text-sm);
+}
+
+.edu__period {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.14em;
+  color: var(--gold);
+  margin: 0.5rem 0 var(--space-3);
+}
+
+.edu__note {
+  color: var(--ink-1);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  border-top: 1px solid var(--line-faint);
+  padding-top: var(--space-3);
+}
+
+/* ---- certifications ---- */
+
+.edu__certs {
+  grid-area: certs;
+}
+
+.edu__cert-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+}
+
+.edu__cert {
+  display: grid;
+  gap: 0.25rem;
+  padding-block: 0.85rem;
+  border-bottom: 1px solid var(--line-faint);
+}
+
+.edu__cert:first-child {
+  border-top: 1px solid var(--line-faint);
+}
+
+.edu__cert-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.7em;
+  color: var(--ink-0);
+  font-weight: 440;
+  font-size: var(--text-base);
+}
+
+.edu__badge {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold-dim);
+  border-radius: 999px;
+  padding: 0.2em 0.75em;
+  background: var(--gold-dim);
+}
+
+.edu__cert--live .edu__cert-title {
+  color: var(--ink-0);
+}
+
+.edu__cert-meta {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  color: var(--ink-2);
+}
+
+.edu__cert-note {
+  font-size: var(--text-sm);
+  color: var(--ink-1);
+}
+
+/* ---- continuous learning ---- */
+
+.edu__learning {
+  grid-area: learning;
+}
+
+.edu__learning-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+@media (max-width: 860px) {
+  .edu {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "diploma"
+      "certs"
+      "learning";
+  }
+}

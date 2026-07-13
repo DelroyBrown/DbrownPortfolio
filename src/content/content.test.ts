@@ -5,7 +5,13 @@ import { workflowPhases } from "./aiWorkflow";
 import { skillGroups } from "./skills";
 import { principles } from "./principles";
 import { pendulumDiagram, threadDiagram } from "./diagrams";
-import { education, experienceRoles } from "./experience";
+import {
+  certifications,
+  continuousLearning,
+  experienceRoles,
+  formalEducation,
+  personalDetails,
+} from "./experience";
 import { profile } from "./profile";
 
 describe("project content integrity", () => {
@@ -118,7 +124,18 @@ describe("supporting content", () => {
       expect(role.points.length).toBeGreaterThan(1);
       expect(role.technologies.length).toBeGreaterThan(0);
     }
-    expect(education.length).toBeGreaterThanOrEqual(3);
+  });
+
+  it("education, certifications and personal details mirror the CV", () => {
+    expect(formalEducation.title).toMatch(/Full Stack Web Development/);
+    expect(formalEducation.institution).toMatch(/Code Institute/);
+    expect(certifications.length).toBeGreaterThanOrEqual(5);
+    expect(certifications.some((c) => c.inProgress)).toBe(true);
+    expect(continuousLearning.length).toBeGreaterThanOrEqual(5);
+    const labels = personalDetails.map((d) => d.label);
+    expect(labels).toEqual(
+      expect.arrayContaining(["Location", "Right to work", "Availability"]),
+    );
   });
 
   it("diagram edges reference existing nodes", () => {

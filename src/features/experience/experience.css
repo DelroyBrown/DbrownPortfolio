@@ -118,42 +118,6 @@
   margin-top: var(--space-2);
 }
 
-.xp__education {
-  margin-top: var(--space-6);
-  max-width: 46rem;
-}
-
-.xp__education-title {
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--ink-2);
-  margin-bottom: var(--space-3);
-}
-
-.xp__education-list {
-  margin: 0;
-}
-
-.xp__education-list strong {
-  display: block;
-  color: var(--ink-0);
-  font-weight: 460;
-}
-
-.xp__institution {
-  display: block;
-  color: var(--ink-1);
-}
-
-.xp__note {
-  display: block;
-  color: var(--ink-2);
-  font-size: var(--text-xs);
-  margin-top: 0.2rem;
-}
-
 @media (max-width: 860px) {
   .xp__role {
     grid-template-columns: 1fr;

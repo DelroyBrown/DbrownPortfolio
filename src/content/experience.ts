@@ -1,4 +1,8 @@
-import type { EducationEntry, ExperienceRole } from "../types/content";
+import type {
+  EducationEntry,
+  ExperienceRole,
+  PersonalDetail,
+} from "../types/content";
 
 /* ------------------------------------------------------------------ *
  *  Professional history — sourced from the CV. Keep the two in sync: *
@@ -30,7 +34,7 @@ export const experienceRoles: ExperienceRole[] = [
     role: "Freelance Software Developer",
     period: "2018 — Present",
     summary:
-      "Designed, developed and deployed 20+ responsive websites for SMEs, non-profits and startups.",
+      "Designed, developed and deployed 20+ responsive websites for SMEs, non-profits and startups — with a 95%+ client satisfaction rate.",
     points: [
       "Managed the complete project lifecycle — requirements, build, deployment, maintenance",
       "Integrated Stripe and PayPal for secure payment and booking flows",
@@ -69,24 +73,66 @@ export const experienceRoles: ExperienceRole[] = [
   },
 ];
 
-export const education: EducationEntry[] = [
-  {
-    id: "code-institute",
-    title: "Diploma in Full Stack Web Development",
-    institution: "Code Institute & Edinburgh Napier University",
-    period: "2019 — 2021",
-  },
-  {
-    id: "codecademy",
-    title: "Full Stack Engineer Career Path · Python 3 · React · JavaScript",
-    institution: "Codecademy certifications",
-    period: "2019 — 2021",
-  },
+/* ---- education & certification ----------------------------------- */
+
+export const formalEducation: EducationEntry = {
+  id: "code-institute",
+  title: "Diploma in Full Stack Web Development",
+  institution: "Code Institute & Edinburgh Napier University",
+  period: "2019 — 2021",
+  note: "Comprehensive training in web development, software engineering principles and professional development practices.",
+};
+
+export const certifications: EducationEntry[] = [
   {
     id: "aws-cert",
-    title: "AWS Cloud Certification (Associate level)",
-    institution: "In progress",
-    period: "Current",
-    note: "Alongside ongoing work with IAM, S3 and EC2 in production",
+    title: "AWS Cloud Certification — Associate level",
+    institution: "Amazon Web Services",
+    period: "In progress",
+    note: "Alongside ongoing production work with IAM, S3 and EC2",
+    inProgress: true,
   },
+  {
+    id: "codecademy-fse",
+    title: "Full Stack Engineer Career Path",
+    institution: "Codecademy",
+    period: "2019 — 2021",
+  },
+  {
+    id: "codecademy-python",
+    title: "Python 3 Fundamentals",
+    institution: "Codecademy",
+    period: "2019 — 2021",
+  },
+  {
+    id: "codecademy-react",
+    title: "React: The Complete Guide",
+    institution: "Codecademy",
+    period: "2019 — 2021",
+  },
+  {
+    id: "codecademy-js",
+    title: "The Complete JavaScript Course",
+    institution: "Codecademy",
+    period: "2019 — 2021",
+  },
+];
+
+export const continuousLearning: string[] = [
+  "AWS cloud fundamentals & best practices",
+  "Advanced JavaScript & React patterns",
+  "Database optimisation (SQL, NoSQL)",
+  "RESTful API design & implementation",
+  "Git & GitHub workflows",
+];
+
+/* ---- the practical details recruiters ask first ------------------- */
+
+export const personalDetails: PersonalDetail[] = [
+  { label: "Location", value: "High Wycombe, UK" },
+  { label: "Right to work", value: "British citizen" },
+  { label: "Availability", value: "Immediate — full-time or part-time, remote" },
+  { label: "Transport", value: "Full UK driving licence & own vehicle" },
+  { label: "Languages", value: "English (native)" },
+  { label: "References", value: "Available on request" },
 ];

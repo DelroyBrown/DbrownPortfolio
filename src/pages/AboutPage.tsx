@@ -1,5 +1,6 @@
 import { About } from "../features/about/About";
 import { Experience } from "../features/experience/Experience";
+import { Education } from "../features/education/Education";
 import { TechnologyMap } from "../features/skills/TechnologyMap";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { profile } from "../content/profile";
@@ -17,6 +18,7 @@ export default function AboutPage() {
     <div className="page">
       <About />
       <Experience />
+      <Education />
       <TechnologyMap />
     </div>
   );

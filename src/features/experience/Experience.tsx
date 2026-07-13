@@ -1,6 +1,6 @@
 import { SectionIntroduction } from "../../components/common/SectionIntroduction";
 import { Reveal } from "../../components/common/Reveal";
-import { education, experienceIntro, experienceRoles } from "../../content/experience";
+import { experienceIntro, experienceRoles } from "../../content/experience";
 import "./experience.css";
 
 /** Professional history — an editorial timeline drawn from the CV. */
@@ -44,22 +44,6 @@ export function Experience() {
             </Reveal>
           ))}
         </ol>
-
-        <Reveal className="xp__education" delay={120}>
-          <h3 className="xp__education-title">Education & certification</h3>
-          <dl className="xp__education-list">
-            {education.map((entry) => (
-              <div key={entry.id} className="meta-row">
-                <dt>{entry.period}</dt>
-                <dd>
-                  <strong>{entry.title}</strong>
-                  <span className="xp__institution">{entry.institution}</span>
-                  {entry.note && <span className="xp__note">{entry.note}</span>}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </Reveal>
       </div>
     </section>
   );

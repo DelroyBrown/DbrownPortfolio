@@ -37,6 +37,13 @@ export interface EducationEntry {
   institution: string;
   period: string;
   note?: string;
+  /** highlights an in-progress qualification */
+  inProgress?: boolean;
+}
+
+export interface PersonalDetail {
+  label: string;
+  value: string;
 }
 
 export type GameKey = "pendulum" | "thread" | "invader";
