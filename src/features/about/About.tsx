@@ -8,17 +8,19 @@ export function About() {
     <section className="section" id="about" aria-labelledby="about-title">
       <div className="container">
         <SectionIntroduction
-          index="07"
+          index="08"
           eyebrow="About"
           title={<span id="about-title">Structure meets direction.</span>}
         />
 
         <div className="about">
           <Reveal as="p" className="about__fragment about__fragment--a prose">
-            I am a full-stack software developer who enjoys building both
-            practical systems and unusual interactive experiences. My background
-            spans Python and Django backend development, React interfaces,
-            relational data, APIs and browser-based creative work.
+            I am a full-stack software developer with four-plus years of
+            professional experience — a healthcare platform built on Django and
+            React, manufacturing dashboards and reporting automation, and more
+            than twenty freelance sites shipped for SMEs, non-profits and
+            startups. The connecting thread is AWS cloud infrastructure and
+            backends that can be trusted.
           </Reveal>
 
           <Reveal as="blockquote" className="about__pull" delay={120}>

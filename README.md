@@ -71,10 +71,13 @@ No environment variables are required for development.
 All copy, links and project data live in typed files under `src/content/` —
 no layout component contains personal text.
 
-- `profile.ts` — name, title, availability, email, GitHub, LinkedIn, CV URL,
-  site URL. **To update personal details, edit only this file.** Setting
-  `email: null` removes every email link; adding `linkedin`/`cvUrl` surfaces
-  those links automatically.
+- `profile.ts` — name, title, availability, email, phone, GitHub, LinkedIn,
+  CV URL, site URL. **To update personal details, edit only this file.**
+  Setting `email`/`phone` to null removes those links; `linkedin`/`cvUrl`
+  surface automatically when set.
+- `experience.ts` — professional history and education, mirrored from the CV.
+  When the CV changes, update this file and replace
+  `public/cv/delroy-brown-cv.pdf`.
 - `projects.ts` — all project case-study data. A commented template at the
   bottom shows how to add a project; drop imagery in
   `public/projects/<slug>/` and add the object to the `projects` array.

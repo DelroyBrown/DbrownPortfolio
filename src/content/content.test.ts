@@ -5,6 +5,7 @@ import { workflowPhases } from "./aiWorkflow";
 import { skillGroups } from "./skills";
 import { principles } from "./principles";
 import { pendulumDiagram, threadDiagram } from "./diagrams";
+import { education, experienceRoles } from "./experience";
 import { profile } from "./profile";
 
 describe("project content integrity", () => {
@@ -101,6 +102,23 @@ describe("supporting content", () => {
     expect(principles).toHaveLength(6);
     expect(profile.github).toBe("https://github.com/DelroyBrown");
     expect(profile.initials).toBe("DJB");
+    expect(profile.linkedin).toMatch(/^https:\/\/www\.linkedin\.com\/in\//);
+    expect(profile.cvUrl).toMatch(/cv\/delroy-brown-cv\.pdf$/);
+  });
+
+  it("experience mirrors the CV — every role and qualification is complete", () => {
+    expect(experienceRoles.length).toBeGreaterThanOrEqual(4);
+    const companies = experienceRoles.map((r) => r.company);
+    expect(companies).toEqual(
+      expect.arrayContaining(["BINA-Q", "E3D Online Ltd", "IT Career Switch Ltd"]),
+    );
+    for (const role of experienceRoles) {
+      expect(role.period).toBeTruthy();
+      expect(role.summary).toBeTruthy();
+      expect(role.points.length).toBeGreaterThan(1);
+      expect(role.technologies.length).toBeGreaterThan(0);
+    }
+    expect(education.length).toBeGreaterThanOrEqual(3);
   });
 
   it("diagram edges reference existing nodes", () => {

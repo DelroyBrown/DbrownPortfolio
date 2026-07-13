@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from "react";
-import { ArrowUpRight, FileText, Mail } from "lucide-react";
+import { ArrowUpRight, FileText, Mail, Phone } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../../components/common/BrandIcons";
 import { SectionIntroduction } from "../../components/common/SectionIntroduction";
 import { Reveal } from "../../components/common/Reveal";
@@ -23,7 +23,7 @@ export function ContactPanel() {
     <section className="section" id="contact" aria-labelledby="contact-title">
       <div className="container">
         <SectionIntroduction
-          index="08"
+          index="09"
           eyebrow="Contact"
           title={
             <span id="contact-title">Let's build something worth remembering.</span>
@@ -44,6 +44,20 @@ export function ContactPanel() {
                 <span>
                   <strong>Email</strong>
                   {profile.email}
+                </span>
+                <ArrowUpRight size={16} aria-hidden="true" />
+              </a>
+            )}
+            {profile.phone && (
+              <a
+                className="contact__channel"
+                href={`tel:${profile.phone.replace(/\s/g, "")}`}
+                data-cursor="Call"
+              >
+                <Phone size={18} aria-hidden="true" />
+                <span>
+                  <strong>Phone</strong>
+                  {profile.phone}
                 </span>
                 <ArrowUpRight size={16} aria-hidden="true" />
               </a>

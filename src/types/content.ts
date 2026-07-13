@@ -13,11 +13,30 @@ export interface Profile {
   currentFocus: string;
   location: string;
   email: string | null;
+  phone: string | null;
   github: string;
   linkedin: string | null;
   cvUrl: string | null;
   siteUrl: string;
   metaDescription: string;
+}
+
+export interface ExperienceRole {
+  id: string;
+  company: string;
+  role: string;
+  period: string;
+  summary: string;
+  points: string[];
+  technologies: string[];
+}
+
+export interface EducationEntry {
+  id: string;
+  title: string;
+  institution: string;
+  period: string;
+  note?: string;
 }
 
 export type GameKey = "pendulum" | "thread" | "invader";

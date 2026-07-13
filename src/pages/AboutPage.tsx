@@ -1,4 +1,5 @@
 import { About } from "../features/about/About";
+import { Experience } from "../features/experience/Experience";
 import { TechnologyMap } from "../features/skills/TechnologyMap";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { profile } from "../content/profile";
@@ -15,6 +16,7 @@ export default function AboutPage() {
   return (
     <div className="page">
       <About />
+      <Experience />
       <TechnologyMap />
     </div>
   );

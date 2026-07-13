@@ -1,0 +1,170 @@
+.xp {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+}
+
+.xp__role {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(14rem, 4fr) 7fr;
+  grid-template-areas:
+    "rail rail"
+    "head points"
+    "head tech";
+  gap: var(--space-2) clamp(2rem, 4vw, 4rem);
+  padding-block: var(--space-5);
+  border-bottom: 1px solid var(--line-faint);
+  padding-left: 1.6rem;
+}
+
+.xp__role:first-child {
+  border-top: 1px solid var(--line-faint);
+}
+
+.xp__rail {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--line-faint);
+}
+
+.xp__dot {
+  position: absolute;
+  left: -4px;
+  top: calc(var(--space-5) + 0.5rem);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid var(--cyan);
+  background: var(--bg-0);
+  transition:
+    background-color var(--dur-base) var(--ease-out),
+    box-shadow var(--dur-base) var(--ease-out);
+}
+
+.xp__role.is-revealed .xp__dot {
+  background: var(--cyan);
+  box-shadow: 0 0 0 5px var(--cyan-dim);
+}
+
+.xp__head {
+  grid-area: head;
+}
+
+.xp__period {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 0.5rem;
+}
+
+.xp__title {
+  font-size: var(--text-xl);
+  font-weight: 360;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+}
+
+.xp__company {
+  color: var(--ink-1);
+  font-weight: 340;
+}
+
+.xp__summary {
+  color: var(--ink-1);
+  font-size: var(--text-sm);
+  max-width: 34ch;
+}
+
+.xp__points {
+  grid-area: points;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+  font-size: var(--text-sm);
+  color: var(--ink-1);
+  align-content: start;
+}
+
+.xp__points li {
+  position: relative;
+  padding-left: 1.2em;
+  line-height: 1.6;
+}
+
+.xp__points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 6px;
+  height: 1px;
+  background: var(--cyan);
+}
+
+.xp__tech {
+  grid-area: tech;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: var(--space-2);
+}
+
+.xp__education {
+  margin-top: var(--space-6);
+  max-width: 46rem;
+}
+
+.xp__education-title {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin-bottom: var(--space-3);
+}
+
+.xp__education-list {
+  margin: 0;
+}
+
+.xp__education-list strong {
+  display: block;
+  color: var(--ink-0);
+  font-weight: 460;
+}
+
+.xp__institution {
+  display: block;
+  color: var(--ink-1);
+}
+
+.xp__note {
+  display: block;
+  color: var(--ink-2);
+  font-size: var(--text-xs);
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 860px) {
+  .xp__role {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "head"
+      "points"
+      "tech";
+  }
+
+  .xp__summary {
+    max-width: none;
+    margin-bottom: var(--space-2);
+  }
+}

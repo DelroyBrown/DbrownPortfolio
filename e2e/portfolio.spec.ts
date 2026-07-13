@@ -26,7 +26,7 @@ test.describe("portfolio", () => {
 
     await page.goto("/");
     await expect(page.getByRole("heading", { level: 1 })).toContainText("Delroy J.");
-    await expect(page.getByText("Open to roles & select projects")).toBeVisible();
+    await expect(page.getByText(/Available now/)).toBeVisible();
     expect(errors).toEqual([]);
   });
 

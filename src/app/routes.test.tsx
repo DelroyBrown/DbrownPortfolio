@@ -19,13 +19,13 @@ describe("routes", () => {
     const heading = await screen.findByRole("heading", { level: 1 });
     expect(heading).toHaveTextContent(/Delroy J\./);
     expect(heading).toHaveTextContent(/Brown/);
-    expect(screen.getByText(/open to roles/i)).toBeInTheDocument();
+    expect(screen.getByText(/available now/i)).toBeInTheDocument();
   });
 
   it("renders the homepage sections in order", async () => {
     renderRoute("/");
     await screen.findByRole("heading", { level: 1 });
-    for (const id of ["work", "ai-development", "experiments", "code", "approach", "skills", "about", "contact"]) {
+    for (const id of ["work", "ai-development", "experiments", "code", "approach", "skills", "experience", "about", "contact"]) {
       expect(document.getElementById(id), `section #${id}`).toBeInTheDocument();
     }
   });

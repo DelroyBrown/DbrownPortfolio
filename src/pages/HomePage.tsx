@@ -7,6 +7,7 @@ import { Exhibition } from "../features/gameExhibition/Exhibition";
 import { CodeStoriesSection } from "../features/codeStories/CodeStoriesSection";
 import { DevelopmentPrinciples } from "../features/approach/DevelopmentPrinciples";
 import { TechnologyMap } from "../features/skills/TechnologyMap";
+import { Experience } from "../features/experience/Experience";
 import { About } from "../features/about/About";
 import { ContactPanel } from "../features/contact/ContactPanel";
 import { usePageMeta } from "../hooks/usePageMeta";
@@ -19,13 +20,19 @@ const personJsonLd = {
   name: profile.name,
   jobTitle: profile.title,
   url: profile.siteUrl,
-  sameAs: [profile.github],
+  sameAs: [profile.github, profile.linkedin].filter(Boolean),
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "High Wycombe",
+    addressCountry: "GB",
+  },
   knowsAbout: [
     "Full-stack development",
     "Python",
     "Django",
     "React",
     "TypeScript",
+    "AWS cloud infrastructure",
     "Interactive browser experiences",
     "AI-assisted software development",
   ],
@@ -59,6 +66,7 @@ export function HomePage() {
       <CodeStoriesSection />
       <DevelopmentPrinciples />
       <TechnologyMap />
+      <Experience />
       <About />
       <ContactPanel />
     </>
