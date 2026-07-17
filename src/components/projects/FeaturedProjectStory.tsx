@@ -9,13 +9,15 @@ import "./projects.css";
 interface FeaturedProjectStoryProps {
   project: Project;
   visual: ReactNode;
+  /** short characterisation shown in the meta rows, e.g. "Reader-first · provenance-labelled" */
+  approach?: string;
 }
 
 /**
  * Editorial case-study spread for a featured project: sticky title and
  * meta on the left, scrolling visual + system detail on the right.
  */
-export function FeaturedProjectStory({ project, visual }: FeaturedProjectStoryProps) {
+export function FeaturedProjectStory({ project, visual, approach }: FeaturedProjectStoryProps) {
   return (
     <article
       className="featured-story"
@@ -46,10 +48,12 @@ export function FeaturedProjectStory({ project, visual }: FeaturedProjectStoryPr
                 <dt>Status</dt>
                 <dd>{project.status}</dd>
               </div>
-              <div className="meta-row">
-                <dt>Approach</dt>
-                <dd>Backend-first · audit-focused</dd>
-              </div>
+              {approach && (
+                <div className="meta-row">
+                  <dt>Approach</dt>
+                  <dd>{approach}</dd>
+                </div>
+              )}
             </dl>
           </Reveal>
 

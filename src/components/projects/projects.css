@@ -154,9 +154,24 @@
   border: 1px solid var(--line-faint);
   border-radius: var(--radius-lg);
   background:
-    radial-gradient(90% 70% at 20% 0%, var(--care-dim), transparent 60%),
+    radial-gradient(
+      90% 70% at 20% 0%,
+      color-mix(in srgb, var(--accent, var(--cyan)) 12%, transparent),
+      transparent 60%
+    ),
     var(--bg-1);
   overflow: hidden;
+}
+
+.featured-story__visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 1.2s var(--ease-out);
+}
+
+.featured-story__visual a:hover img {
+  transform: scale(1.02);
 }
 
 .featured-story__columns {
@@ -225,108 +240,5 @@
   .featured-story__columns {
     grid-template-columns: 1fr;
     gap: var(--space-4);
-  }
-}
-
-/* ---------------------------------- CareCompass blueprint ---------- */
-
-.care-visual {
-  width: 100%;
-  height: auto;
-}
-
-.care-visual__grid {
-  stroke: rgba(214, 222, 235, 0.04);
-  stroke-width: 1;
-}
-
-.care-visual__box {
-  fill: rgba(21, 26, 36, 0.85);
-  stroke: var(--line);
-  stroke-width: 1;
-}
-
-.care-visual__box--accent {
-  stroke: rgba(127, 184, 164, 0.55);
-}
-
-.care-visual__box--new {
-  stroke: var(--care-accent);
-  stroke-dasharray: 4 3;
-}
-
-.care-visual__label {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  fill: var(--ink-1);
-  letter-spacing: 0.06em;
-}
-
-.care-visual__label--accent {
-  fill: var(--care-accent);
-}
-
-.care-visual__small {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  fill: var(--ink-2);
-}
-
-.care-visual__small--accent {
-  fill: var(--care-accent);
-}
-
-.care-visual__ink {
-  stroke: rgba(166, 173, 186, 0.35);
-  stroke-width: 2;
-  stroke-linecap: round;
-}
-
-.care-visual__flow {
-  fill: none;
-  stroke: rgba(127, 184, 164, 0.45);
-  stroke-width: 1.2;
-  stroke-dasharray: 5 4;
-  animation: care-flow 2.4s linear infinite;
-}
-
-.care-visual__caption-title {
-  font-family: var(--font-display);
-  font-size: 19px;
-  fill: var(--ink-0);
-  letter-spacing: -0.01em;
-}
-
-.care-visual__caption {
-  font-size: 13.5px;
-  fill: var(--ink-1);
-  font-family: var(--font-body);
-}
-
-.care-visual__node {
-  opacity: 0;
-  animation: care-node 700ms var(--ease-out) forwards;
-}
-
-@keyframes care-node {
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes care-flow {
-  to {
-    stroke-dashoffset: -18;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .care-visual__node {
-    opacity: 1;
-    animation: none;
-  }
-
-  .care-visual__flow {
-    animation: none;
   }
 }

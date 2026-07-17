@@ -1,10 +1,9 @@
 import { SectionIntroduction } from "../../components/common/SectionIntroduction";
-import { CareCompassVisual } from "../../components/projects/CareCompassVisual";
 import { FeaturedProjectStory } from "../../components/projects/FeaturedProjectStory";
 import { ProjectIndex } from "../../components/projects/ProjectIndex";
 import {
-  careCompass,
   invaderStorm,
+  kybalion,
   pendulum,
   portfolioSite,
   thread,
@@ -21,7 +20,27 @@ export function SelectedWork() {
           lede="Maintainable systems, clear user needs, and rules that live where they can be trusted."
         />
 
-        <FeaturedProjectStory project={careCompass} visual={<CareCompassVisual />} />
+        <FeaturedProjectStory
+          project={kybalion}
+          approach="Reader-first · provenance-labelled"
+          visual={
+            <a
+              href={kybalion.liveUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Open The Kybalion live (opens in a new tab)"
+              data-cursor="Visit"
+              data-cursor-accent={kybalion.accent}
+            >
+              <img
+                src={kybalion.image}
+                alt={kybalion.imageAlt}
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          }
+        />
 
         <ProjectIndex
           projects={[pendulum, thread, invaderStorm, portfolioSite]}

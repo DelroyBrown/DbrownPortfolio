@@ -17,7 +17,7 @@ export const skillGroups: SkillGroup[] = [
       "Stripe & PayPal integration",
       "SQL",
     ],
-    accent: "var(--care-accent)",
+    accent: "var(--sage)",
   },
   {
     id: "frontend",

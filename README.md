@@ -1,9 +1,9 @@
 # Delroy J. Brown — Portfolio
 
 An interactive digital exhibition for a creative full-stack software developer:
-practical systems (CareCompass), playable browser experiments (Pendulum,
-Thread, Invader Storm) and an honest account of an AI-assisted development
-workflow — directed, inspected and verified by a human.
+practical systems (The Kybalion study platform), playable browser experiments
+(Pendulum, Thread, Invader Storm) and an honest account of an AI-assisted
+development workflow — directed, inspected and verified by a human.
 
 **Live: https://delroybrown.github.io/DbrownPortfolio/**
 
@@ -110,7 +110,12 @@ performs a few real inputs for gameplay shots, and writes optimised WebP files:
 public/projects/pendulum/{cover,gameplay}.webp
 public/projects/thread/{cover,gameplay}.webp
 public/projects/invader-storm/{cover,gameplay}.webp
+public/projects/kybalion/{cover,reader}.webp
 ```
+
+The Kybalion target hits the live Render deployment (free-tier instances
+sleep, so the first request may need its cold-start allowance) and captures
+the landing page plus the chapter reader.
 
 **Manual fallback** if automated capture is blocked: open the live game,
 set the browser device toolbar to 1600×900, take a screenshot, convert to
@@ -131,7 +136,7 @@ exit. Thread's exhibits recommend landscape on narrow screens.
 
 ## Routing
 
-`BrowserRouter` with clean URLs (`/work/care-compass`, `/experiments/pendulum`, …).
+`BrowserRouter` with clean URLs (`/work/kybalion`, `/experiments/pendulum`, …).
 GitHub Pages compatibility uses the documented `404.html` fallback: the build
 copies `index.html` to `404.html` (see `spaFallback()` in `vite.config.ts`),
 so deep links and hard refreshes serve the app and the router resolves the
@@ -204,7 +209,6 @@ PORTFOLIO_BASE=/DbrownPortfolio/ npm run preview
 - Cross-origin iframes can't report *why* they failed; the fallback is a
   timeout, so a very slow connection may briefly show the failure panel.
 - GitHub Pages' SPA fallback returns HTTP 404 for deep links (see Routing).
-- CareCompass ships without product screenshots by design (care data is
-  sensitive); its identity is the animated audit blueprint.
-#   D b r o w n P o r t f o l i o  
- 
+- The Kybalion live link runs on Render's free tier, which sleeps when idle —
+  the first visit after a quiet period can take up to a minute to wake.
+# DbrownPortfolio

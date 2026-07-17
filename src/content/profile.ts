@@ -25,7 +25,7 @@ export const profile: Profile = {
     "Creative technical problem-solving",
   ],
   availability: "Available now — full-time or part-time, remote",
-  currentFocus: "Care-sector software · browser physics experiments",
+  currentFocus: "Interactive study platforms · browser physics experiments",
   location: "High Wycombe, UK",
   email: "delroybrown.db@gmail.com",
   phone: "07795 128316",

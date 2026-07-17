@@ -82,6 +82,23 @@ const TARGETS = [
       await page.keyboard.up("Space");
     },
   },
+  {
+    slug: "kybalion",
+    url: "https://kybalion.onrender.com/",
+    viewport: { width: 1600, height: 1000 },
+    /** a web app, not a game — wait for the SPA shell, no canvas */
+    readySelector: "#root main, #root [class]",
+    coverDelay: 5000,
+    /** second shot: the reader itself, captured as reader.webp */
+    secondShotName: "reader",
+    async play(page) {
+      await page.goto("https://kybalion.onrender.com/read", {
+        waitUntil: "networkidle",
+        timeout: 60_000,
+      });
+      await page.waitForTimeout(4000);
+    },
+  },
 ];
 
 async function toWebp(pngBuffer, outPath) {
@@ -108,12 +125,13 @@ async function captureTarget(browser, target) {
     await page.waitForTimeout(target.coverDelay);
     await toWebp(await page.screenshot({ type: "png" }), resolve(dir, "cover.webp"));
 
+    const secondShot = `${target.secondShotName ?? "gameplay"}.webp`;
     try {
       await target.play(page);
-      await toWebp(await page.screenshot({ type: "png" }), resolve(dir, "gameplay.webp"));
+      await toWebp(await page.screenshot({ type: "png" }), resolve(dir, secondShot));
     } catch (err) {
-      console.warn(`  ⚠ gameplay interaction failed (${err.message}) — capturing current frame`);
-      await toWebp(await page.screenshot({ type: "png" }), resolve(dir, "gameplay.webp"));
+      console.warn(`  ⚠ second-shot interaction failed (${err.message}) — capturing current frame`);
+      await toWebp(await page.screenshot({ type: "png" }), resolve(dir, secondShot));
     }
   } finally {
     await context.close();

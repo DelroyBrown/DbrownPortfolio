@@ -57,13 +57,23 @@ describe("routes", () => {
     expect(
       await screen.findByRole("heading", { name: /software shaped around real problems/i }),
     ).toBeInTheDocument();
-    expect(screen.getByText("CareCompass")).toBeInTheDocument();
+    expect(screen.getByText("The Kybalion")).toBeInTheDocument();
   });
 
-  it("renders the CareCompass case study", async () => {
-    renderRoute("/work/care-compass");
-    expect(await screen.findByRole("heading", { level: 1, name: "CareCompass" })).toBeInTheDocument();
-    expect(screen.getByText(/in active development/i)).toBeInTheDocument();
+  it("renders the Kybalion case study with correct external links", async () => {
+    renderRoute("/work/kybalion");
+    expect(
+      await screen.findByRole("heading", { level: 1, name: "The Kybalion" }),
+    ).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Visit" })).toHaveAttribute(
+      "href",
+      "https://kybalion.onrender.com",
+    );
+    // the footer carries a "GitHub" link too — assert the repo link is present
+    const githubHrefs = screen
+      .getAllByRole("link", { name: "GitHub" })
+      .map((link) => link.getAttribute("href"));
+    expect(githubHrefs).toContain("https://github.com/DelroyBrown/kybalion");
   });
 
   it("renders the Pendulum case study with correct external links", async () => {

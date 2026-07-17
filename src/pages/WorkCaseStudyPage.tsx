@@ -2,7 +2,6 @@ import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { GithubIcon } from "../components/common/BrandIcons";
 import { games, projectBySlug } from "../content/projects";
-import { CareCompassVisual } from "../components/projects/CareCompassVisual";
 import { Reveal } from "../components/common/Reveal";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { profile } from "../content/profile";
@@ -83,9 +82,22 @@ export default function WorkCaseStudyPage() {
           )}
         </header>
 
-        {project.slug === "care-compass" && (
+        {project.image && (
           <Reveal className="featured-story__visual" delay={140}>
-            <CareCompassVisual />
+            {project.liveUrl ? (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Open ${project.title} live (opens in a new tab)`}
+                data-cursor="Visit"
+                data-cursor-accent={project.accent}
+              >
+                <img src={project.image} alt={project.imageAlt} loading="lazy" decoding="async" />
+              </a>
+            ) : (
+              <img src={project.image} alt={project.imageAlt} loading="lazy" decoding="async" />
+            )}
           </Reveal>
         )}
 

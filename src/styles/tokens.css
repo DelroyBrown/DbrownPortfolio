@@ -48,8 +48,8 @@
   --invader-bg: #0d0817; /* void violet */
   --invader-glow: rgba(255, 93, 241, 0.12);
 
-  --care-accent: #7fb8a4; /* calm clinical green */
-  --care-dim: rgba(127, 184, 164, 0.13);
+  --sage: #7fb8a4; /* calm green */
+  --sage-dim: rgba(127, 184, 164, 0.13);
 
   /* ---- typography ---- */
   --font-display: "Space Grotesk Variable", "Space Grotesk", system-ui, sans-serif;
