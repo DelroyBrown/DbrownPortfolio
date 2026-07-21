@@ -31,9 +31,8 @@ export function About() {
 
           <Reveal as="p" className="about__fragment about__fragment--b prose" delay={80}>
             Software that works reliably — but also feels deliberate, clear and
-            memorable. That standard applies whether the product is an
-            interactive study edition of a 1908 text or a cathedral you swing
-            through.
+            memorable. That standard applies whether the product is a living
+            library of sacred texts or a cathedral you swing through.
           </Reveal>
 
           <Reveal as="p" className="about__fragment about__fragment--c prose" delay={160}>

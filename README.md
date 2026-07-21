@@ -1,7 +1,7 @@
 # Delroy J. Brown — Portfolio
 
 An interactive digital exhibition for a creative full-stack software developer:
-practical systems (The Kybalion study platform), playable browser experiments
+practical systems (The Perennial study platform), playable browser experiments
 (Pendulum, Thread, Invader Storm) and an honest account of an AI-assisted
 development workflow — directed, inspected and verified by a human.
 
@@ -110,10 +110,10 @@ performs a few real inputs for gameplay shots, and writes optimised WebP files:
 public/projects/pendulum/{cover,gameplay}.webp
 public/projects/thread/{cover,gameplay}.webp
 public/projects/invader-storm/{cover,gameplay}.webp
-public/projects/kybalion/{cover,reader}.webp
+public/projects/the-perennial/{cover,reader}.webp
 ```
 
-The Kybalion target hits the live Render deployment (free-tier instances
+The Perennial target hits the live Render deployment (free-tier instances
 sleep, so the first request may need its cold-start allowance) and captures
 the landing page plus the chapter reader.
 
@@ -136,7 +136,7 @@ exit. Thread's exhibits recommend landscape on narrow screens.
 
 ## Routing
 
-`BrowserRouter` with clean URLs (`/work/kybalion`, `/experiments/pendulum`, …).
+`BrowserRouter` with clean URLs (`/work/the-perennial`, `/experiments/pendulum`, …).
 GitHub Pages compatibility uses the documented `404.html` fallback: the build
 copies `index.html` to `404.html` (see `spaFallback()` in `vite.config.ts`),
 so deep links and hard refreshes serve the app and the router resolves the
@@ -209,6 +209,6 @@ PORTFOLIO_BASE=/DbrownPortfolio/ npm run preview
 - Cross-origin iframes can't report *why* they failed; the fallback is a
   timeout, so a very slow connection may briefly show the failure panel.
 - GitHub Pages' SPA fallback returns HTTP 404 for deep links (see Routing).
-- The Kybalion live link runs on Render's free tier, which sleeps when idle —
+- The Perennial live link runs on Render's free tier, which sleeps when idle —
   the first visit after a quiet period can take up to a minute to wake.
 # DbrownPortfolio

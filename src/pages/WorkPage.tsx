@@ -19,8 +19,8 @@ export default function WorkPage() {
         <SectionIntroduction
           index="04"
           eyebrow="Selected Work"
-          title="Software shaped around real problems."
-          lede="Every project here is a system, not a screenshot — most have live builds or public repositories."
+          title="Whole products, built end to end."
+          lede="Every project here is a live, public build — engineering underneath, experience on top."
         />
         <ProjectIndex projects={projects} />
       </div>

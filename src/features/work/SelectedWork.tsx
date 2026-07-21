@@ -3,8 +3,8 @@ import { FeaturedProjectStory } from "../../components/projects/FeaturedProjectS
 import { ProjectIndex } from "../../components/projects/ProjectIndex";
 import {
   invaderStorm,
-  kybalion,
   pendulum,
+  perennial,
   portfolioSite,
   thread,
 } from "../../content/projects";
@@ -16,25 +16,25 @@ export function SelectedWork() {
         <SectionIntroduction
           index="04"
           eyebrow="Selected Work"
-          title={<span id="work-title">Software shaped around real problems.</span>}
-          lede="Maintainable systems, clear user needs, and rules that live where they can be trusted."
+          title={<span id="work-title">Whole products, built end to end.</span>}
+          lede="Shipped, public and complete — engineering underneath, experience on top."
         />
 
         <FeaturedProjectStory
-          project={kybalion}
+          project={perennial}
           approach="Reader-first · provenance-labelled"
           visual={
             <a
-              href={kybalion.liveUrl}
+              href={perennial.liveUrl}
               target="_blank"
               rel="noreferrer"
-              aria-label="Open The Kybalion live (opens in a new tab)"
+              aria-label="Open The Perennial live (opens in a new tab)"
               data-cursor="Visit"
-              data-cursor-accent={kybalion.accent}
+              data-cursor-accent={perennial.accent}
             >
               <img
-                src={kybalion.image}
-                alt={kybalion.imageAlt}
+                src={perennial.image}
+                alt={perennial.imageAlt}
                 loading="lazy"
                 decoding="async"
               />

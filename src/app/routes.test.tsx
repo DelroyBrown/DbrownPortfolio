@@ -55,15 +55,15 @@ describe("routes", () => {
   it("renders the work index", async () => {
     renderRoute("/work");
     expect(
-      await screen.findByRole("heading", { name: /software shaped around real problems/i }),
+      await screen.findByRole("heading", { name: /whole products, built end to end/i }),
     ).toBeInTheDocument();
-    expect(screen.getByText("The Kybalion")).toBeInTheDocument();
+    expect(screen.getByText("The Perennial")).toBeInTheDocument();
   });
 
-  it("renders the Kybalion case study with correct external links", async () => {
-    renderRoute("/work/kybalion");
+  it("renders The Perennial case study with correct external links", async () => {
+    renderRoute("/work/the-perennial");
     expect(
-      await screen.findByRole("heading", { level: 1, name: "The Kybalion" }),
+      await screen.findByRole("heading", { level: 1, name: "The Perennial" }),
     ).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Visit" })).toHaveAttribute(
       "href",

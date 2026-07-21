@@ -83,7 +83,8 @@ const TARGETS = [
     },
   },
   {
-    slug: "kybalion",
+    /** The Perennial — repo & Render service keep the historical "kybalion" name */
+    slug: "the-perennial",
     url: "https://kybalion.onrender.com/",
     viewport: { width: 1600, height: 1000 },
     /** a web app, not a game — wait for the SPA shell, no canvas */

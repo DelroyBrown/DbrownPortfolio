@@ -7,14 +7,14 @@ import { withBase } from "../utils/paths";
  *  drop imagery into /public/projects/<slug>/.                       *
  * ------------------------------------------------------------------ */
 
-export const kybalion: Project = {
-  slug: "kybalion",
-  title: "The Kybalion",
+export const perennial: Project = {
+  slug: "the-perennial",
+  title: "The Perennial",
   shortDescription:
-    "An interactive study edition of a 1908 Hermetic classic — immersive digital book, knowledge map and private study platform in one.",
+    "A living library of sacred texts — a multi-book immersive reader, knowledge map and private study platform in one.",
   fullDescription:
-    "The Kybalion is a production-grade web application for reading and studying the public-domain 1908 text: a calm, typographically serious reader with layered commentary, a dedicated page per Hermetic principle with a bespoke interactive visualisation, a force-directed knowledge map of the whole book, full search, and personal study tools — bookmarks, highlights, notes, journal and reading progress. The original chapters are loaded verbatim from the Project Gutenberg transcription; every modern addition is visibly separated, and AI-generated commentary is explicitly labelled with its model and review status. Reading never requires an account — anonymous progress lives locally and merges into an account on sign-up.",
-  category: "Full-stack platform · digital reading",
+    "The Perennial is a production-grade web application — a growing library of sacred and wisdom texts. It currently holds two books, The Kybalion (1908) and the Ethiopian Bible (the ninety-book canon of the Ethiopian Orthodox Tewahedo Church, assembled from public-domain and freely licensed English translations), switchable from the navigation rail with a colour scheme each: tarnished gold on warm near-black, moon-silver on indigo night. Around the calm, typographically serious reader sit layered commentary, a page per Hermetic principle with its own interactive visualisation, a force-directed knowledge map, full search, and personal study tools. Original texts load verbatim with full provenance; every modern addition is visibly separated, and AI-generated commentary is explicitly labelled with its model and review status. Reading never requires an account — anonymous progress lives locally and merges on sign-up.",
+  category: "Full-stack platform · digital library",
   year: "2026",
   role: "Design, architecture & full-stack build",
   status: "Live",
@@ -36,30 +36,30 @@ export const kybalion: Project = {
     "Render",
   ],
   keyFeatures: [
-    "A 15-chapter reader with five themes, four reading modes and adjustable typography",
+    "A growing two-book library — The Kybalion and the Ethiopian Bible — switchable from the navigation rail, each with its own colour scheme",
+    "A calm reader with five themes, four reading modes and adjustable typography",
     "14 annotation types in a tabbed panel — editorial vs AI provenance always shown",
     "Seven Hermetic principles, each with its own interactive visualisation",
     "A force-directed knowledge map with filters, focus mode and shortest-path tracing",
     "Grouped search across text, commentary, definitions and personal material",
     "Bookmarks, highlights, notes and a journal with autosaving drafts and JSON export",
-    "JWT accounts with rotating refresh tokens, data export and account deletion",
-    "Anonymous local progress that merges into an account on sign-up",
+    "JWT accounts that merge anonymous local progress on sign-up",
   ],
   engineeringChallenges: [
+    "A reproducible content pipeline that assembles the ninety-book Ethiopian canon from sourced translations, with provenance tracked in a manifest",
     "Highlights anchored to text offsets so they survive typography and layout changes",
     "Merging anonymous local study data into a fresh account without losing anything",
-    "A custom force layout that stays keyboard-accessible via a full list alternative",
-    "Keeping the 1908 text verbatim while every modern addition carries visible provenance",
+    "Keeping every original text verbatim while modern additions carry visible provenance",
   ],
   outcomes: [
-    "Live on Render — reader, principles, map and study tools all public",
-    "53 backend tests across ten Django apps, plus Vitest coverage in the reader",
+    "Live on Render — both books, principles, map and study tools all public",
+    "53 backend tests across ten Django apps and 26 frontend tests in the reader",
     "Documented architecture, content pipeline and deployment (docs/)",
   ],
-  image: withBase("projects/kybalion/cover.webp"),
+  image: withBase("projects/the-perennial/cover.webp"),
   imageAlt:
-    "The Kybalion study edition: a dark, atmospheric landing page with serif typography introducing the interactive book.",
-  gallery: [withBase("projects/kybalion/reader.webp")],
+    "The Perennial: a dark, atmospheric landing page for a living library of sacred texts.",
+  gallery: [withBase("projects/the-perennial/reader.webp")],
   liveUrl: "https://kybalion.onrender.com",
   repositoryUrl: "https://github.com/DelroyBrown/kybalion",
   featured: true,
@@ -387,7 +387,7 @@ export const portfolioSite: Project = {
 };
 
 export const projects: Project[] = [
-  kybalion,
+  perennial,
   pendulum,
   thread,
   invaderStorm,
